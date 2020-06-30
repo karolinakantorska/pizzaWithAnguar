@@ -14,5 +14,14 @@ export class AppComponent {
     { name: 'Napoli', price: 18 },
     { name: 'Hawaii', price: 20 },
   ];
+  // data Model
+  order: Order = {
+    email: 'karolina.kantorska@gmail.com',
+    orderItems: [
+      { amount: 0, pizza: { name: 'Margaritha', price: 15 } },
+      { amount: 0, pizza: { name: 'Napoli', price: 18 } },
+      { amount: 0, pizza: { name: 'Hawaii', price: 20 } },
+    ]
+  }
 }
 

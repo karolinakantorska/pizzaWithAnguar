@@ -1,6 +1,12 @@
+<h1>
+  Order Form
+</h1>
+<div>Email: <input type="text" [value]="order.email" /> </div>
 <ul>
   <!-- iterates pizzas in appComponent -->
-  <li *ngFor="let pizza of pizzas">
-    {{ pizza.name}}
+  <li *ngFor="let orderItem of order.orderItems">
+    {{ orderItem.pizza.name }} x {{ orderItem.amount }} =
+    {{orderItem.pizza.price * orderItem.amount}}
   </li>
 </ul>
+<div> Total: <strong>{{ order.orderTotal }}</strong></div>
