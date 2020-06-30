@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { Order } from './pizza.model';
 @Component({
   // to add whole programm to index.html
   selector: 'app-root',
@@ -22,6 +23,9 @@ export class AppComponent {
       { amount: 0, pizza: { name: 'Napoli', price: 18 } },
       { amount: 0, pizza: { name: 'Hawaii', price: 20 } },
     ]
+  };
+  submitOrder() {
+    alert(`Pizzas ordered by ${this.order.email} !`);
   }
 }
 

@@ -5,8 +5,10 @@
 <ul>
   <!-- iterates pizzas in appComponent -->
   <li *ngFor="let orderItem of order.orderItems">
-    {{ orderItem.pizza.name }} x {{ orderItem.amount }} =
+    {{ orderItem.pizza.name }} x {{ orderItem.amount }}
+    <input type="number" [(ngModel)]="orderItemAmount" min="0" /> =
     {{orderItem.pizza.price * orderItem.amount}}
   </li>
 </ul>
 <div> Total: <strong>{{ order.orderTotal }}</strong></div>
+<button type="button" (click)="submitOrder()">Order</button>
