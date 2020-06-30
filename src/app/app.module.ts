@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { OrderItemComponent } from './order-item.component';
 import { BakeService } from './service/bake.service';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { BakeService } from './service/bake.service';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
   ],
   providers: [BakeService],
   bootstrap: [AppComponent]
