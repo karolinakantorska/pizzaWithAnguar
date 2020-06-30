@@ -1,1 +1,6 @@
-<h1>Test</h1>
+<p>from order-item.component.html</p>
+<li>
+  {{ orderItem.pizza.name }} x {{ orderItem.amount }}
+  <input type="number" [(ngModel)]="orderItemAmount" min="0" /> =
+  {{orderItem.pizza.price * orderItem.amount}}
+</li>

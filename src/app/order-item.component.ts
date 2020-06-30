@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output} from '@angular/core';
+
 import { OrderItem} from './pizza.model';
+import { EventEmitter } from 'events';
 
 
 @Component({
@@ -10,9 +12,13 @@ import { OrderItem} from './pizza.model';
 
 export class OrderItemComponent implements OnInit {
   @Input() orderItem: OrderItem;
+  @Output() orderAmountChanged = new EventEmitter();
   constructor() { }
 
   ngOnInit() { }
+  amountChanged() {
+    this.orderAmountChanged.emit(this.orderItem.amount);
+  }
 
 }
 
