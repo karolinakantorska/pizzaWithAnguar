@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { OrderItem} from './pizza.model';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class OrderItemComponent implements OnInit {
-
+  @Input() orderItem: OrderItem;
   constructor() { }
 
   ngOnInit() { }

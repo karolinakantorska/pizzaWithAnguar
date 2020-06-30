@@ -2,7 +2,10 @@
   Order Form
 </h1>
 <div>Email: <input type="text" [value]="order.email" /> </div>
-<app-order-item></app-order-item>
+<app-order-item
+  *ngFor= "let orderItem of order.orderItems"
+  [orderItem]="orderItem"
+></app-order-item>
 <ul>
   <!-- iterates pizzas in appComponent -->
   <li *ngFor="let orderItem of order.orderItems">
