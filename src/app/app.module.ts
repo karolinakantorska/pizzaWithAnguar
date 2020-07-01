@@ -8,11 +8,16 @@ import { OrderItemComponent } from './order-item.component';
 import { BakeService } from './service/bake.service';
 import { AppRoutingModule } from './app-routing.module';
 
+import { OrderComponent } from './order.component';
+import { ContactComponent } from './contact.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderItemComponent,
+    OrderComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

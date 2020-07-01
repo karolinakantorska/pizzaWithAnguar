@@ -1,16 +1,11 @@
-<h1>
-  {{title}}
-</h1>
-<div>Email: <input type="text" [value]="order.email" /> </div>
-
 <ul>
-  <app-order-item
-    *ngFor="let orderItem of order.orderItems"
-    [orderItem]="orderItem"
-    (orderAmountChanged)="orderAmountChanged($event)"
-  ></app-order-item>
+  <li>
+    <a [routerLink]="['/order']">Order</a>
+  </li>
+  <li>
+    <a [routerLink]="['/contact']">Kontakt</a>
+  </li>
 </ul>
-<div> Total: <strong>{{ order.orderTotal }}</strong></div>
-<button type="button" (click)="submitOrder()">Order</button>
-<div>Router-outlet</div>
+
+<div>Router Outlet:</div>
 <router-outlet></router-outlet>
